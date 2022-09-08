@@ -413,3 +413,21 @@ functions = {
     "6":checkSonglistElementStandalone,
     "7":checkAll,
 }
+'''
+print("Arcaea Songlist & 自制包完整性检查 " + version)
+readConfigs()
+
+print("1. 检查Songlist中的曲目是否都存在于songs文件夹")
+print("2. 检查songs文件夹中的曲目是否都存在于Songlist")
+print("3. 检查songs文件夹中曲目子文件夹的文件是否完整(aff, jpg, ogg等)")
+print("4. 检查Songlist合法性(包含检查是否和Packlist等文件匹配, 以及检查背景文件完整性)")
+print("5. 检查Songlist合法性(包含检查是否和Packlist等文件匹配, 不检查背景文件完整性)")
+print("6. 检查Songlist合法性(仅检查Songlist本身的合法性)")
+print("7. 执行全部检查")
+i = input("请输入您想执行的检查项目的序号 (1-7) (默认: 7): ")
+try:
+    functions.get(i)()
+except BaseException:
+    functions.get("7")()
+input("按下回车键以退出程序.")
+'''
